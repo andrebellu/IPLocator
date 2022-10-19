@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+    integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+    integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+
+  <meta name="keywords" content="IP Location" />
+  <meta name="author" content="Andrea Bellu" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="description" content="IP Locator is a tool that allows you to find the location of an IP address.">
+
+  <title>IP Location</title>
+</head>
+
+<body>
+  <div id="app" class="h-screen flex flex-col justify-center items-center text-center">
+    <div class="flex">
+      <h1 class="text-3xl font-bold text-white">IP Location</h1>
+      <!--<img src="/pin-48.svg" class="w-8 h-8 animate-bounce" alt="bouncing pin"/>-->
+    </div>
+
+    <p class="text-white italic">The accuracy of geolocation may vary</p>
+    <button id="get-location" class="btn">Get Location</button>
+  </div>
+
+  <div class="flex justify-center">
+    <div id="map" class="rounded-lg mb-10"></div>
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
