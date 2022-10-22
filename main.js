@@ -24,7 +24,6 @@ btn.onclick = async () => {
       marker.addTo(map);
     });
 
-  // scroll smoothly to the bottom of the page
   window.scrollTo({
     top: document.body.scrollHeight,
     behavior: "smooth",
@@ -32,6 +31,5 @@ btn.onclick = async () => {
 };
 
 btn_info.onclick = async () => {
-  // make a popup that explains what the app does
 alert("This app uses the ipapi.co API to get your location and display it on a map. It uses Leaflet to display the map and OpenStreetMap as the map tile layer. It also uses the Fetch API to make the request to the API. \n\nIf nothing happens, it's probably because you're using an adblocker. Try disabling it and refreshing the page.");
 };
