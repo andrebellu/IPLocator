@@ -1,9 +1,9 @@
 import "./style.css";
 
 const btn = document.getElementById("get-location");
+const btn_info = document.getElementById("info");
 
 btn.onclick = async () => {
-  // https://api.ipify.org?format=json
   fetch("https://ipapi.co/json/")
     .then(function (response) {
       return response.json();
@@ -29,4 +29,9 @@ btn.onclick = async () => {
     top: document.body.scrollHeight,
     behavior: "smooth",
   });
+};
+
+btn_info.onclick = async () => {
+  // make a popup that explains what the app does
+alert("This app uses the ipapi.co API to get your location and display it on a map. It uses Leaflet to display the map and OpenStreetMap as the map tile layer. It also uses the Fetch API to make the request to the API. \n\nIf nothing happens, it's probably because you're using an adblocker. Try disabling it and refreshing the page.");
 };
